@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sample Forms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Number</th>
+      <th>Date on</th>
+      <th>Truth</th>
+      <th>Categorise</th>
+      <th>Rating</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sample_forms.each do |sample_form| %>
+      <tr>
+        <td><%= sample_form.name %></td>
+        <td><%= sample_form.number %></td>
+        <td><%= sample_form.date_on %></td>
+        <td><%= sample_form.truth %></td>
+        <td><%= sample_form.categorise %></td>
+        <td><%= sample_form.rating %></td>
+        <td><%= link_to 'Show', sample_form %></td>
+        <td><%= link_to 'Edit', edit_sample_form_path(sample_form) %></td>
+        <td><%= link_to 'Destroy', sample_form, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sample Form', new_sample_form_path %>

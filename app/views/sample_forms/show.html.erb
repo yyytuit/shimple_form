@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @sample_form.name %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @sample_form.number %>
+</p>
+
+<p>
+  <strong>Date on:</strong>
+  <%= @sample_form.date_on %>
+</p>
+
+<p>
+  <strong>Truth:</strong>
+  <%= @sample_form.truth %>
+</p>
+
+<p>
+  <strong>Categorise:</strong>
+  <%= @sample_form.categorise %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @sample_form.rating %>
+</p>
+
+<%= link_to 'Edit', edit_sample_form_path(@sample_form) %> |
+<%= link_to 'Back', sample_forms_path %>

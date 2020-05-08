@@ -1,0 +1,15 @@
+<%= simple_form_for(@sample_form) do |f| %>
+<%= f.input :name %>
+<%= f.input :name,label: 'Your username please', error: 'Username is mandatory, please specify one' %>
+<%= f.input :number %>
+<%= f.input :date_on %>
+<%= f.input :date_on, start_year: Date.today.year - 5,
+                              end_year: Date.today.year - 12, discard_day: true,
+                              order: [:month, :year] %>
+<%= f.input :truth %>
+<%= f.input :truth, inline_label: 'Yes, remember me' %>
+<%= f.input :categorise, as: :check_boxes, collection: ['IT','飲食','不動産'] %>
+<%= f.input :categorise, as: :radio_buttons, collection: [['0', 'female'], ['1', 'male']], label_method: :second %>
+<%= f.input :rating, collection: 18..60 %>
+<%= f.submit %>
+<% end %>
